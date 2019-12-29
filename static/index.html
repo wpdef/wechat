@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>姓名电话随机抽奖</title>
+<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+<div class="bg">
+<img src="style/bg.jpg">
+</div>
+<div class="box">
+<div class="jz">
+<p><b>抽奖活动</b></p>
+<span class="name">姓名</span><br />
+<span class="phone">电话</span><br />
+<div class="start" id="btntxt" onclick="start()">开始</div>
+</div>
+<div class="zjmd">
+<p class="p1">中奖者名单</p>
+<div class="list">
+</div>
+</div>
+</div>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="style/cj.js"></script>
+<script>
+     var xinm = new Array();
+        {%for item in data%}
+            xinm[{{forloop.counter|add:-1}}] = "{{ item.name }}"
+        {%endfor%}
+
+        var phone = new Array();
+        {%for item in data%}
+            phone[{{forloop.counter|add:-1}}] = "{{ item.phone }}"
+        {%endfor%}
+
+        var isdefault =new Array()
+        {%for item in data%}
+            isdefault[{{forloop.counter|add:-1}}] = "{{ item.is_default }}"
+        {%endfor%}
+</script>
+</body>
+</html>
