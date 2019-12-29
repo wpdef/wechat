@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e903866-8793-4f4b-8da6-3d34924c0858" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/newyear/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/newyear/user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/wsgi.py" afterDir="false" />
-    </list>
+    <list default="true" id="1e903866-8793-4f4b-8da6-3d34924c0858" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +22,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/newyear/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-500">
+            <state relative-caret-position="242">
               <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
             </state>
           </provider>
@@ -79,7 +70,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/newyear/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -292,12 +283,12 @@
       <option name="presentableId" value="Default" />
       <updated>1577547823949</updated>
       <workItem from="1577547825394" duration="26180000" />
-      <workItem from="1577616423164" duration="5166000" />
+      <workItem from="1577616423164" duration="5601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31346000" />
+    <option name="totallyTimeSpent" value="31781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1028" extended-state="6" />
@@ -415,23 +406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/newyear/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-500">
-          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/newyear/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/newyear/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -449,6 +423,23 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newyear/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/newyear/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
         </state>
       </provider>
     </entry>
