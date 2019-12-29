@@ -24,6 +24,8 @@ class UserInfo(BaseModel):
     name = models.CharField(max_length=50, verbose_name='姓名')
     phone = models.CharField(max_length=11, verbose_name='联系电话',unique=True)
     is_default = models.BooleanField(default=False, verbose_name='是否备选')
+    # is_win = models.BooleanField(default=False, verbose_name='是否中奖')
+    # desc = models.CharField(max_length=50, verbose_name='说明')
     class Meta:
         db_table = 'df_userinfo'
         verbose_name = '会员'

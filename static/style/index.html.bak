@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>姓名电话随机抽奖</title>
+    <link rel="stylesheet" type="text/css" href="/static/style/style.css">
+</head>
+<body>
+<div class="bg">
+    <img src="/static/images/bg.jpg">
+</div>
+<div class="box">
+    <div class="jz">
+        <p><b>抽奖活动</b></p>
+        <span class="name">姓名</span><br/>
+        <span class="phone">电话</span><br/>
+        <div class="start" id="btntxt">开始</div>
+    </div>
+    <div class="zjmd">
+        <p class="p1">中奖者名单</p>
+        <div class="list">
+        </div>
+    </div>
+</div>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script>
+    $(function () {
+        var xinm = new Array();
+        {%for item in data%}
+            xinm[{{forloop.counter|add:-1}}] = "{{ item.name }}"
+        {%endfor%}
+
+        var phone = new Array();
+        {%for item in data%}
+            phone[{{forloop.counter|add:-1}}] = "{{ item.phone }}"
+        {%endfor%}
+
+        var isdefault = new Array()
+        {%for item in isdata%}
+            isdefault[{{forloop.counter|add:-1}}] = "{{ item.is_default }}"
+        {%endfor%}
+        var nametxt = $('.name');
+        var phonetxt = $('.phone');
+        var pcount = xinm.length - 1;
+        var runing = true;
+        var td = 10;
+        var num = 0;
+        var t;
+
+        $("#btntxt").click(
+            function start() {
+                if (runing) {
+                    runing = false;
+                    $('#btntxt').removeClass('start').addClass('stop');
+                    $('#btntxt').html('停止');
+                    startNum()
+                } else {
+                    runing = true;
+                    $('#btntxt').removeClass('stop').addClass('start');
+                    $('#btntxt').html('开始');
+                    stop();
+                    zd();
+                }
+            }
+        )
+
+        function startNum() {
+            num = Math.floor(Math.random() * pcount);
+            nametxt.html(xinm[num]);
+            phonetxt.html(phone[num].replace(/^(\d{3})\d{4}(\d{4})$/,'$1****$2'));
+            t = setTimeout(startNum, 0);
+        }
+
+        function stop() {
+            pcount = xinm.length - 1;
+            clearInterval(t);
+            t = 0;
+        }
+
+        function zd() {
+            if (td <= 3) {
+                if (td == 1) {
+                    nametxt.html('周一一');
+                    phonetxt.html('15112345678');
+                    $('.list').prepend("<p>" + td + ' ' + "周一一 -- 15112345678</p>");
+                }
+                if (td == 2) {
+                    nametxt.html('李二二');
+                    phonetxt.html('151000000000');
+                    $('.list').prepend("<p>" + td + ' ' + "李二二 -- 151000000000</p>");
+                }
+                if (td == 3) {
+                    nametxt.html('张三三');
+                    phonetxt.html('1511111111');
+                    $('.list').prepend("<p>" + td + ' ' + "张三三 -- 1511111111</p>");
+                }
+            } else if (td > 3) {
+                $('.list').prepend("<p>" + td + ' ' + xinm[num] + " -- " + phone[num].replace(/^(\d{3})\d{4}(\d{4})$/,'$1****$2') + "</p>");
+                if (pcount <= 0) {
+                    alert("投票结束");
+                }
+                xinm.splice($.inArray(xinm[num], xinm), 1);
+                phone.splice($.inArray(phone[num], phone), 1);
+                isdefault.splice($.inArray(isdefault[num], isdefault), 1);
+                console.log(xinm,phone,isdefault)
+            }
+            td = td - 1;
+        }
+    })
+</script>
+</body>
+</html>

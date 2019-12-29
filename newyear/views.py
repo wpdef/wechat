@@ -8,11 +8,11 @@ class newYear(View):
     """新年活动类"""
     def get(self,request):
         """报名展示页"""
-        cate = cateType.objects.all().order_by("index")
-        isdata = UserInfo.objects.filter("isdefault=True")
-        otdata = UserInfo.objects.filter("isdefault=False")
-        con = {"otdata":otdata,"isdata":"isdata","cate":cate}
-        return render(request,"newyear/index.html",con)
+        cate = cateType.objects.all().order_by("-index")
+        isdata = UserInfo.objects.filter(is_default=1)
+        otdata = UserInfo.objects.filter(is_default=0)
+        con = {"otdata":otdata,"isdata":isdata,"cate":cate}
+        return render(request, "newyear/index.html", con)
 
     def post(self,request):
         """报名提交页"""
