@@ -28,6 +28,7 @@
         line-height: 50px;
         color: #fff;
         list-style: none;
+        cursor:pointer;
     }
 </style>
 <div class="bg">
@@ -35,7 +36,7 @@
 </div>
 <ul class="nav">
     {% for item in cate %}
-        <li id="ck{{ item.id }}">· {{ item.cate }}</li>
+        <li class="ck" at="{{ item.id }}">· {{ item.cate }}</li>
     {% endfor %}
 </ul>
 <div class="box">
@@ -54,82 +55,102 @@
 </div>
 <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
 <script>
+    var nametxt = $('.name');
+    var phonetxt = $('.phone');
+    var runing = true;
+    var td = 0;
+    var num = 0;
+    var t;
+    var isdata=new Array()
+    var data=new Array()
     $(function () {
-        var data = new Array()
-        {%for item in otdata%}
-            data[{{forloop.counter|add:-1}}] = new Array();
-            data[parseInt({{forloop.counter|add:-1}})][0] = "{{ item.name }}"
-            data[parseInt({{forloop.counter|add:-1}})][1] = "{{ item.phone }}"
-        {% endfor %}
-        var isdata = new Array()
-        {%for item in isdata%}
-            isdata[{{forloop.counter|add:-1}}] = new Array();
-            isdata[parseInt({{forloop.counter|add:-1}})][0] = "{{ item.name }}"
-            isdata[parseInt({{forloop.counter|add:-1}})][1] = "{{ item.phone }}"
-        {% endfor %}
+        {#获取等级相关数据#}
+        $(".ck").click(function () {
+            var cid = $(this).attr("at");
+            $('.list').empty()
+            nametxt.html("姓名")
+            phonetxt.html("电话")
+            $.get("{% url 'newyear:asydata' %}", {'cid': cid}, function (ret) {
+                var cate = ret["cate"]
+                var userisdf = ret["userisdf"]
+                var userdf = ret["userdf"]
+                window.td = cate["count"]
+                $(".jz p b").html(cate["cate"]+"共 "+cate["count"]+" 名")
+                {#console.log(userisdf.length)#}
+                for(var i =0;i<userisdf.length;i++){
+                    isdata[i] = new Array()
+                    isdata[i][0]= userisdf[i]["fields"]["name"]
+                    isdata[i][1]= userisdf[i]["fields"]["phone"]
+                    window.isdata[i]=isdata[i]
+                }
+                window.isdata = isdata
 
-        var nametxt = $('.name');
-        var phonetxt = $('.phone');
-        var pcount = data.length - 1;
-        var runing = true;
-        var td = 500;
-        var num = 0;
-        var t;
+                for(var i =0;i<userdf.length;i++){
+                    data[i] = new Array()
+                    data[i][0]= userdf[i]["fields"]["name"]
+                    data[i][1]= userdf[i]["fields"]["phone"]
+                    window.data[i]=data[i]
+                }
+                window.data = data
+                var pcount = data.length - 1;
+                window.pcount = pcount
+            })
+    })
 
-        $("#btntxt").click(
-            function start() {
-                if (runing) {
-                    runing = false;
-                    $('#btntxt').removeClass('start').addClass('stop');
-                    $('#btntxt').html('停止');
-                    startNum()
-                } else {
-                    runing = true;
-                    $('#btntxt').removeClass('stop').addClass('start');
-                    $('#btntxt').html('开始');
-                    stop();
-                    zd();
+    {#开始和结束#}
+    $("#btntxt").click(
+        function start() {
+            if (runing) {
+                runing = false;
+                $('#btntxt').removeClass('start').addClass('stop');
+                $('#btntxt').html('停止');
+                startNum()
+            } else {
+                runing = true;
+                $('#btntxt').removeClass('stop').addClass('start');
+                $('#btntxt').html('开始');
+                stop();
+                zd();
+            }
+        }
+    )
+
+    function startNum() {
+        num = Math.floor(Math.random() * pcount);
+        console.log(num,data)
+        nametxt.html(data[num][0]);
+        phonetxt.html(data[num][1].replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2'));
+        t = setTimeout(startNum, 0);
+    }
+
+    function stop() {
+        pcount = data.length - 1;
+        clearInterval(t);
+        t = 0;
+    }
+
+    function zd() {
+        if (td <= isdata.length) {
+            for (var k = 0; k < isdata.length; k++) {
+                if (td == k + 1) {
+                    nametxt.html(isdata[k][0]);
+                    phonetxt.html(isdata[k][1].replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2'));
+                    $('.list').prepend("<p>" + td + ' ' + isdata[k][0] + " -- " + isdata[k][1].replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2') + "</p>");
+                    isdata.splice($.inArray(isdata[k], isdata), 1);
                 }
             }
-        )
 
-        function startNum() {
-            num = Math.floor(Math.random() * pcount);
-            nametxt.html(data[num][0]);
-            phonetxt.html(data[num][1].replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2'));
-            t = setTimeout(startNum, 0);
-        }
-
-        function stop() {
-            pcount = data.length - 1;
-            clearInterval(t);
-            t = 0;
-        }
-
-        function zd() {
-            if (td <= isdata.length) {
-                for (var k = 0; k < isdata.length; k++) {
-                    if (td == k + 1) {
-                        nametxt.html(isdata[k][0]);
-                        phonetxt.html(isdata[k][1]);
-                        $('.list').prepend("<p>" + td + ' ' + isdata[k][0] + " -- " + isdata[k][1].replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2') + "</p>");
-                        isdata.splice($.inArray(isdata[k], isdata), 1);
-                    }
-                }
-
-                    }
-                else
-                    if (td > isdata.length) {
-                        $('.list').prepend("<p>" + td + ' ' + data[num][0] + " -- " + data[num][1].replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2') + "</p>");
-                        if (pcount <= 0) {
-                            alert("参与人数不足");
-                        }
-                        data.splice($.inArray(data[num], data), 1);
-                    }
-                    td = td - 1;
-                }
+        } else if (td > isdata.length) {
+            $('.list').prepend("<p>" + td + ' ' + data[num][0] + " -- " + data[num][1].replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2') + "</p>");
+            if (pcount <= 0) {
+                alert("参与人数不足");
             }
-        )
+            data.splice($.inArray(data[num], data), 1);
+        }
+        td = td - 1;
+    }
+    }
+    )
 </script>
 </body>
 </html>
