@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>个人抽奖信息登记</title>
+<title>{{ res_title }}</title>
 <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
 <style>
 body {
@@ -16,7 +16,7 @@ body {
 	line-height:21px;
 	backgr	.id_card {
 	width:93%;
-	margin:0 auto;
+	margin:0 auto
 }
 ound:#FFF;}.sub_z {
 	width:90%;
@@ -102,7 +102,7 @@ ound:#FFF;}.sub_z {
     margin-left: 20%;
 }
 p{
-    color:red;
+    color:{{ color }};
     padding: 5px 20px;
     font-size: 14px;
     line-height: 20px;
@@ -110,20 +110,7 @@ p{
 </style>
 </head>
 <body>
-
-<form method="post">
-    <p>注：为保证能够顺利兑奖，请填写真实的姓名和畅通的手机号，否则无效</p>
-    <div class="sub_z">
-        {% csrf_token %}
-        <input class="input_1" type="text" name="name" placeholder="请输入姓名">
-        <input class="input_1" type="text" name="phone" placeholder="请输入手机号">
-         <input class="submit" type="submit" value="提交">
-    </div>
-</form>
-
-<script>
-
-</script>
+<p>{{ res_info }}</p>
 
 </body>
 </html>
