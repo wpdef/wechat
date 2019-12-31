@@ -56,12 +56,12 @@ class User(View):
         phone = request.POST.get('phone')
         ret = re.match(r"^1[35678]\d{9}$", phone)
         if ret is None:
-            con = {"color": "red", "res_title": "提交失败","res_info":"请输入正确的手机号"}
+            con = {"color": "red", "res_title": "登记失败","res_info":"请输入正确的手机号"}
             return render(request,"newyear/res.html",con)
         user = UserInfo.objects.filter(phone=phone)
         if user:
-            con = {"color": "red", "res_title": "提交失败", "res_info": "该手机号已经注册"}
+            con = {"color": "red", "res_title": "登记失败", "res_info": "该手机号已经注册"}
             return render(request, "newyear/res.html", con)
         UserInfo.objects.create(name=name,phone=phone)
-        con = {"color": "green", "res_title": "提交失败", "res_info": "尊敬的%s 先生/女士，您的信息已成功登记,请等待抽奖"%(name)}
+        con = {"color": "green", "res_title": "登记成功", "res_info": "尊敬的%s 先生/女士，您的信息已成功登记,请等待抽奖"%(name)}
         return render(request, "newyear/res.html", con)
