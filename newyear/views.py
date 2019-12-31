@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.http.response import JsonResponse
 from django.views.generic import View # 通用类视图 as_view的使用
 from .models import cateType,UserInfo
-import json
+import json,re
 from django.core import serializers
 
 class asyData(View):
@@ -50,8 +50,11 @@ class User(View):
     def post(self,request):
         name = request.POST.get('name')
         phone = request.POST.get('phone')
+        ret = re.match(r"^1[35678]\d{9}$", phone)
+        if ret is None:
+            return HttpResponse("请输入正确的手机号")
         user = UserInfo.objects.filter(phone=phone)
         if user:
             return HttpResponse("你已经注册")
         UserInfo.objects.create(name=name,phone=phone)
-        return HttpResponse("尊敬的%s 先生/女士，您的信息已成功登记"%(name))
+        return HttpResponse("尊敬的%s 先生/女士，您的信息已成功登记,请等待抽奖"%(name))
