@@ -1,23 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>活动注册</title>
+<meta charset="utf-8">
+<title>个人抽奖信息登记</title>
+<script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<style>
+body {
+	font-size:20px;
+	font-family:"微软雅黑",Arial;
+	max-width:640px;
+	margin:0 auto;
+	padding:0;
+	color:#333;
+	line-height:21px;
+	backgr	.id_card {
+	width:93%;
+	margin:0 auto;
+}
+ound:#FFF;}.sub_z {
+	width:90%;
+	margin:0 auto;
+	border-radius:5px;
+	box-shadow:0px 0px 10px #888888;
+	padding:10px 0 20px 0;
+}
+.input_1 {
+	width:90%;
+	height:38px;
+	margin:15px auto;
+	display:block;
+	background:#f2f2f2;
+	border:0;
+	border-radius:5px;
+	padding:0 0 0 15px;
+}
+.input_2 {
+	width:55%;
+	height:38px;
+	float:left;
+	border:0;
+	border-radius:5px;
+	background:#f2f2f2;
+	padding:0 0 0 15px;
+}
+.yanzheng {
+	width:38%;
+	height:38px;
+	float:right;
+	border-radius:5px;
+	background:#4a90e2;
+	color:#fff;
+	text-align:center;
+	line-height:38px;
+}
+.select_1 {
+	width:90%;
+	height:38px;
+	margin:0 auto;
+	display:block;
+	border:0;
+	border-radius:5px;
+	background:#f2f2f2;
+	padding:0 0 0 15px;
+	color:#666;
+}
+.select_2 {
+	width:90%;
+	height:38px;
+	margin:0 auto;
+}
+.select_2_1 {
+	width:48%;
+	height:38px;
+	float:left;
+	border:0;
+	border-radius:5px;
+	background:#f2f2f2;
+	padding:0 0 0 15px;
+	color:#666;
+}
+.select_2_2 {
+	width:48%;
+	height:38px;
+	float:right;
+	border:0;
+	border-radius:5px;
+	background:#f2f2f2;
+	padding:0 0 0 15px;
+	color:#666;
+}
+.submit {
+	width:90%;
+	height:38px;
+	margin:0 auto;
+	background:#4a90e2;
+	color:#fff;
+	text-align:center;
+	line-height:38px;
+	border-radius:5px;
+}
+</style>
 </head>
 <body>
-<style>
-    *{padding: 0;margin: 0;}
-    #fom{
-        width: 100%;
-        height: 100%;
-        background-image: url("");
-    }
-</style>
-<form id="fom" method="post">
-    {% csrf_token %}
-    <input type="text" name="name" placeholder="请输入姓名：">
-    <input type="text" name="phone" placeholder="请输入手机号">
-    <input type="submit" value="提交">
+<h3>注：为保证能够顺利兑奖，请填写真实的姓名和畅通的手机号，否则无效</h3>
+<form>
+    <div class="sub_z">
+        <input class="input_1" type="text" name="name" placeholder="请输入姓名">
+        <input class="input_1" type="text" name="phone" placeholder="请输入手机号">
+        <div class="submit">提交</div>
+    </div>
 </form>
+
+<script>
+
+</script>
+
 </body>
 </html>
