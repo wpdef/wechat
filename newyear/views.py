@@ -54,4 +54,4 @@ class User(View):
         if user:
             return HttpResponse("你已经注册")
         UserInfo.objects.create(name=name,phone=phone)
-        return HttpResponse("报名成功")
+        return HttpResponse("尊敬的%s 先生/女士，您的信息已成功登记"%(name))
