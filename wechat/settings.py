@@ -81,7 +81,7 @@ DATABASES = {
     'NAME': 'wechat',
     'USER': 'wechat',
     'PASSWORD': 'wOWlbhy8',
-    'HOST': '47.95.245.204',
+    'HOST': '49.235.210.244',
     'PORT': '3306',
 }
 }
@@ -99,8 +99,8 @@ USE_I18N = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+STATICFILES_DIR = [
+os.path.join(BASE_DIR,'static'),
 ]
+STATIC_ROOT = '/www/wwwroot/wechat/static/'
